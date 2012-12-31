@@ -1,0 +1,32 @@
+<%- model_class = Car -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
+</div>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:brand) %></th>
+      <th><%= model_class.human_attribute_name(:model) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @cars.each do |car| %>
+      <tr>
+        <td><%= link_to car.id, car_path(car) %></td>
+        <td><%= car.brand %></td>
+        <td><%= car.model %></td>
+        <td><%=l car.created_at %></td>
+      </tr>
+    <% end %>
+
+  </tbody>
+</table>
+<p> Note: For more details on each car, please click on the car ID. </p>
+ <div class="form-actions">
+    
+    <%= link_to t('.cancel', :default => t("helpers.links.Back")),
+                cars_path, :class => 'btn' %>
+  </div>

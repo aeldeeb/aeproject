@@ -1,0 +1,4 @@
+class AddFieldsToCars < ActiveRecord::Migration
+  def change
+  end
+end

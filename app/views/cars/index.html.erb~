@@ -1,0 +1,14 @@
+<%- model_class = Car -%>
+      
+  <p class="lead">At our <strong>Global Used Cars portal</strong>, we make it easy and convenient for you to sell your car privately. We list your approved car and advertise it extensively, for FREE, to a wide audience of potential buyers. Once interest is shown in your car we will arrange a test drive in a safe & secure environment! We handle all the paperwork and arrange the transfer of ownership for you!   </p>
+   
+
+
+
+<%= link_to t('.new', :default => t("helpers.links.Advertise Your Car To The World!")),
+            new_car_path,
+            :class => 'btn btn-large btn-block btn-primary' %>
+
+
+
+

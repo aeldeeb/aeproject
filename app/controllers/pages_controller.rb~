@@ -1,0 +1,9 @@
+class PagesController < ApplicationController
+
+  def content
+   @cars = Car.all
+  end
+  def used
+  @car = Car.new
+  end
+end
